@@ -6,6 +6,19 @@
 # Usage: ./trac2jira.pl -i <trac_database> [-o <output_file>]
 # 
 # If no output file is given, output is printed to STDOUT.
+# 
+# The script depends on these Perl Modules: 
+# * DBI
+# * Encode
+# * Getopt::Long
+#
+# Usage: trac2jira.pl -i <trac_database> [-o <output_file>]
+#  * If no output file is given, output is printed to STDOUT.
+#
+#Once the CSV is created, run the import wizard and map the proper fields into Jira. You can use this link as reference:
+#
+# Use '$' as the CSV delimeter.
+# http://www.atlassian.com/software/jira/docs/latest/csv_import.html
 #
 use strict;
 use DBI;
